@@ -52,3 +52,64 @@ The Library-Central application supports two distinct roles: Librarian and User.
 8. **Available Books** - for the user
    - **Search and Filter:** Allows users to search for e-books by name, author, and section, with options to clear filters.
    - **E-Book Listing:** Displays a table of available e-books with columns for book name, author(s), and section. Includes a "Request" button for users to request an e-book.
+
+
+## Installation
+
+### Clone the Repository
+```bash
+git clone https://github.com/GouravDutta-01/Library-Central.git
+```
+Navigate to the root directory of the project
+```bash
+cd Library-Central
+```
+
+### Backend Setup
+1. Open a new terminal in the project's root directory and navigate to the backend directory:
+    ```bash
+    cd backend
+    ```
+2. Create a `.env` file in the backend directory and add the following content:
+    ```env
+    MONGO_URI=your_mongo_db_uri_here
+    JWT_SECRET=your_jwt_secret_here
+    DEFAULT_LIBRARIAN_USERNAME=your_default_libarian_username_here
+    DEFAULT_LIBRARIAN_EMAIL=your_default_libarian_email_here
+    DEFAULT_LIBRARIAN_PASSWORD=your_default_libarian_password_here
+    ```
+    Replace `your_mongo_db_url_here`, `your_jwt_secret_here`, `your_default_libarian_username_here`, `your_default_libarian_email_here`, and `your_default_libarian_password_here` with your actual MongoDB connection URL, JWT secret, and librarian credentials.
+   
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Create the librarian in the system:
+    ```bash
+    npm run create-librarian
+    ```
+    
+5. Run the backend server:
+    ```bash
+    npm start
+    ```
+    The backend will start at [http://localhost:5000](http://localhost:5000)
+
+   ### Frontend Setup
+1. Navigate to the frontend directory:
+    ```bash
+    cd frontend
+    ```
+    
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+    
+3. Run the frontend:
+    ```bash
+    npm start
+    ```
+    Access the application at [http://localhost:3000](http://localhost:3000)
+
